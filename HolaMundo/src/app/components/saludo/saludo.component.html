@@ -1,0 +1,22 @@
+<h2>Hola, ¿cómo te encuentras {{ name }}?</h2>
+<button id="emit-alerta" (click)="alertaSaludo()">Mostrar Alerta</button>
+
+<!-- Aplicar estilos y pasar un innerText (variable) -->
+<p>pasar a través de innerText un variable</p>
+<h3 [ngClass]="name == 'Anónimo' ? 'anonimo' : 'saludo'" [innerText]="name">
+  <!-- No indicamos nada en la etiquetas, sino que el valor viene definido por la propiedad -->
+  <!-- {{ name }} Sería igual que esto -->
+</h3>
+
+<h5 [ngStyle]="{ color: 'grey' }">Prueba en ngStyle</h5>
+
+<h5 [ngStyle]="myStyle">
+  Prueba en ngStyle con objeto myStyle creado en el componente
+</h5>
+
+<p>
+  Pasar mensaje del hijo con un Output/p>
+  <button id="emit-alerta" (click)="enviarMensajePadre()">
+    Enviar mensaje de saludo al componente padre
+  </button>
+</p>
