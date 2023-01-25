@@ -1,3 +1,4 @@
 - ng new "nombre proyecto" crea el proyecto
 - ng server levantar el servidor del proyecto
 - ng g c "carpeta/archivo" crea un componente
+- ng g module o m "nombre carpeta"
