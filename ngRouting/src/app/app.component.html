@@ -311,31 +311,11 @@
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <span>Mi primera app de Angular: {{ title }}</span>
+  <span>Angular Routing Example</span>
+  <button *ngIf="token" (click)="logout()">Logout</button>
 </div>
-<div class="content" role="main">
-  <!-- <h1>Hola, {{ name }}!</h1> -->
 
-  <!-- Input para trabajar con NgModel! -->
-  <!-- Importar Formodule -->
-  <input type="text" placeholder="Nombre de usuario" [(ngModel)]="usuario" />
-  <!-- esto se le llama double binding -->
-  <!-- Para que esté pendiente si hay algún cambio (Controlador, vista) -->
-  <!-- Al modificar la variable se modifica en la vista -->
-  <app-saludo [name]="usuario"></app-saludo>
-  <app-saludo name="Pepe"></app-saludo>
-  <app-saludo></app-saludo>
-
-  <app-saludo
-    [name]="usuario"
-    (mensajeEmitter)="recibirMensajeDelHijo($event)"
-  ></app-saludo>
-
-  <!-- Ejemplo de uso de Servicio -->
-  <p>Ejemplo de uso de Servicio</p>
-  <app-lista-contactos></app-lista-contactos>
-
-  <!--  Ejemplo de petición HTTP -->
-  <p>Ejemplo de petición HTTP</p>
-  <app-login-form></app-login-form>
+<div class="content" role="tabpanel">
+  <!-- Router Outlet renderiza el componente que indique el Routing Module a partir de la ruta URL activa -->
+  <router-outlet></router-outlet>
 </div>

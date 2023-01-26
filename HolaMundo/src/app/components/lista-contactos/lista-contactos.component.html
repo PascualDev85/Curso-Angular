@@ -1,0 +1,18 @@
+<h3>Lista de contactos!</h3>
+<div *ngFor="let contacto of listaContactos">
+  <p class="contacto" (click)="getContacto(contacto.id)">
+    {{ contacto.nombre }}
+  </p>
+</div>
+<ng-container *ngIf="contactoSeleccionado; else noContactoSeleccionado">
+  <div>
+    <h5>Datos del Contacto:</h5>
+    <p>Nombre: {{ contactoSeleccionado.nombre }}</p>
+    <p>Apellido: {{ contactoSeleccionado.apellidos }}</p>
+    <p>Email: {{ contactoSeleccionado.email }}</p>
+    <p>Tlf: {{ contactoSeleccionado.telefono }}</p>
+  </div>
+</ng-container>
+<ng-template #noContactoSeleccionado>
+  <p>No has seleccionado ningún contacto</p>
+</ng-template>
